@@ -1,21 +1,62 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>SentinelOps</title>
+    <meta http-equiv="refresh" content="5">
+    <title>SentinelOps Dashboard</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-
 <body>
 
 <div class="container">
 
     <h1>🛡️ SentinelOps</h1>
+    <p class="subtitle">Linux Server Health Monitoring Dashboard</p>
 
-    <h2>Linux Server Health Monitoring Dashboard</h2>
+    <div class="status-card">
+        <span>Server Status</span>
+        <span class="online">🟢 ONLINE</span>
+    </div>
 
-    <p>System is running successfully.</p>
+    <h2>System Usage</h2>
+
+    <div class="metric">
+        <label>CPU Usage</label>
+        <progress value="{{ system.cpu }}" max="100"></progress>
+        <span>{{ system.cpu }}%</span>
+    </div>
+
+    <div class="metric">
+        <label>Memory Usage</label>
+        <progress value="{{ system.memory }}" max="100"></progress>
+        <span>{{ system.memory }}%</span>
+    </div>
+
+    <div class="metric">
+        <label>Disk Usage</label>
+        <progress value="{{ system.disk }}" max="100"></progress>
+        <span>{{ system.disk }}%</span>
+    </div>
+
+    <h2>System Information</h2>
+
+    <table>
+        <tr><td>Hostname</td><td>{{ system.hostname }}</td></tr>
+        <tr><td>IP Address</td><td>{{ system.ip }}</td></tr>
+        <tr><td>Operating System</td><td>{{ system.os }}</td></tr>
+        <tr><td>Uptime</td><td>{{ system.uptime }}</td></tr>
+    </table>
+
+    <h2>Service Status</h2>
+
+    <table>
+        <tr><td>SSH</td><td>{{ services.ssh }}</td></tr>
+        <tr><td>Nginx</td><td>{{ services.nginx }}</td></tr>
+        <tr><td>Gunicorn</td><td>{{ services.gunicorn }}</td></tr>
+    </table>
 
 </div>
 
 </body>
+
 </html>

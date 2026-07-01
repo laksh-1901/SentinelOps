@@ -1,40 +1,79 @@
 body{
     margin:0;
     padding:0;
-    background:#f4f4f4;
-    font-family:Arial, Helvetica, sans-serif;
+    background:#eef3f8;
+    font-family:Arial,Helvetica,sans-serif;
 }
 
 .container{
-
-    width:70%;
-    margin:60px auto;
-    background:white;
-
+    width:80%;
+    max-width:900px;
+    margin:40px auto;
+    background:#fff;
     padding:30px;
-
-    border-radius:10px;
-
-    box-shadow:0px 0px 10px gray;
-
-    text-align:center;
-
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,.15);
 }
 
 h1{
-
-    color:#1E88E5;
-
+    color:#1565C0;
+    text-align:center;
 }
 
-h2{
-
-    color:#444;
-
+.subtitle{
+    text-align:center;
+    color:#666;
+    margin-bottom:30px;
 }
 
-p{
+.status-card{
+    display:flex;
+    justify-content:space-between;
+    background:#f4f7fb;
+    padding:15px;
+    border-radius:8px;
+    margin-bottom:25px;
+    font-weight:bold;
+}
 
-    font-size:20px;
+.online{
+    color:green;
+}
 
+.metric{
+    margin-bottom:20px;
+}
+
+.metric label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:bold;
+}
+
+progress{
+    width:100%;
+    height:22px;
+}
+
+.metric span{
+    float:right;
+    margin-top:5px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+    margin-bottom:30px;
+}
+
+td{
+    padding:12px;
+    border-bottom:1px solid #ddd;
+}
+
+td:first-child{
+    font-weight:bold;
+    width:40%;
+    background:#f7f9fc;
 }
