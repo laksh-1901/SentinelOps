@@ -54,6 +54,26 @@
         <tr><td>Nginx</td><td>{{ services.nginx }}</td></tr>
         <tr><td>Gunicorn</td><td>{{ services.gunicorn }}</td></tr>
     </table>
+    <h2>🌐 Website Health</h2>
+
+    <table>
+
+    <tr>
+        <td>Website Status</td>
+        <td>{{ website.status }}</td>
+    </tr>
+
+    <tr>
+        <td>HTTP Status</td>
+        <td>{{ website.status_code }}</td>
+    </tr>
+
+    <tr>
+        <td>Response Time</td>
+        <td>{{ website.response_time }} ms</td>
+    </tr>
+
+    </table>
 
 </div>
 
