@@ -59,6 +59,23 @@ progress{
     float:right;
     margin-top:5px;
 }
+.alert-box{
+
+    background:#ffebee;
+
+    color:#b71c1c;
+
+    border-left:6px solid red;
+
+    padding:15px;
+
+    margin-bottom:15px;
+
+    border-radius:8px;
+
+    font-weight:bold;
+
+}
 
 table{
     width:100%;
@@ -77,3 +94,4 @@ td:first-child{
     width:40%;
     background:#f7f9fc;
 }
+

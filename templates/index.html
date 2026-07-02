@@ -1,5 +1,20 @@
 <!DOCTYPE html>
 <html>
+	{% if alerts %}
+
+    <h2>🚨 Active Alerts</h2>
+
+{% for alert in alerts %}
+
+    <div class="alert-box">
+
+    {{ alert }}
+
+    </div>
+
+{% endfor %}
+
+{% endif %}
 
 <head>
     <meta http-equiv="refresh" content="5">
