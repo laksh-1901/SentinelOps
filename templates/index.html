@@ -66,7 +66,34 @@
     </tr>
 
     </table>
+    <h2>🌐 Website Health</h2>
 
+    <div class="status-card">
+        <span><strong>URL</strong></span>
+        <span>{{ website.url }}</span>
+    </div>
+
+    <div class="status-card">
+        <span><strong>Status</strong></span>
+        <span>
+            {% if website.status == "Healthy" %}
+                 🟢 Healthy
+            {% else %}
+                 🔴 Down
+            {% endif %}
+       </span>
+    </div>
+
+    <div class="status-card">
+        <span><strong>HTTP Status</strong></span>
+        <span>{{ website.status_code }}</span>
+    </div>
+
+    <div class="status-card">
+        <span><strong>Response Time</strong></span>
+        <span>{{ website.response_time }} ms</span>
+    </div>
+ 
     <h2>🌐 Website Health</h2>
 
     <table>
