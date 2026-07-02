@@ -10,16 +10,24 @@ def check_service(service_name):
         )
 
         if result.stdout.strip() == "active":
-            return "Running"
+            return {
+                "status": "Running",
+                "icon": "🟢"
+            }
 
-        return "Stopped"
+        return {
+            "status": "Stopped",
+            "icon": "🔴"
+        }
 
     except Exception:
-        return "Unknown"
+        return {
+            "status": "Unknown",
+            "icon": "🟡"
+        }
 
 
 def get_services():
-
     return {
         "ssh": check_service("ssh"),
         "nginx": check_service("nginx"),

@@ -50,10 +50,23 @@
     <h2>Service Status</h2>
 
     <table>
-        <tr><td>SSH</td><td>{{ services.ssh }}</td></tr>
-        <tr><td>Nginx</td><td>{{ services.nginx }}</td></tr>
-        <tr><td>Gunicorn</td><td>{{ services.gunicorn }}</td></tr>
+    <tr>
+        <td>SSH</td>
+        <td>{{ services.ssh.icon }} {{ services.ssh.status }}</td>
+    </tr>
+
+    <tr>
+        <td>Nginx</td>
+        <td>{{ services.nginx.icon }} {{ services.nginx.status }}</td>
+    </tr>
+
+    <tr>
+        <td>Gunicorn</td>
+        <td>{{ services.gunicorn.icon }} {{ services.gunicorn.status }}</td>
+    </tr>
+
     </table>
+
     <h2>🌐 Website Health</h2>
 
     <table>
