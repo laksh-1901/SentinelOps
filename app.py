@@ -1,7 +1,7 @@
 from flask import Flask, render_template
-from monitor import get_system_info
-from services import get_services
-from website_monitor import check_website
+from modules.monitor import get_system_info
+from modules.services import get_services
+from modules.website_monitor import check_website
 
 app = Flask(__name__)
 
